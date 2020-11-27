@@ -1,0 +1,1 @@
+git clone  https://github.com/Horea94/Fruit-Images-Dataset data && rm -r data/papers data/src data/test-multiple_fruits
