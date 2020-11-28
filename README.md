@@ -36,7 +36,7 @@ Projekt z przedmiotu Sieci Neuronowe.
    * Dokonać​ wizualizacji aktywacji wewnętrznych warstw sieci z wykorzystaniem techniki DeepDream. W każdym przypadku należy podzielić dane na uczące, walidacyjne i testujące. 
 4. ​Zwielokrotnić zbiór danych z wykorzystaniem technik **data augmentation**. 
     
-# Rozwiązanie powinnozawierać:
+# Rozwiązanie powinno zawierać:
 
 1. Analizę działania każdej z wersji zadania, porównanie wyników uzyskanych dla różnych wariantów, wizualizację obszarów uwagi wybranych struktur oraz wnioski z tych działań wypływające.
 2. Ocenę – z punktu widzenia zaawansowanego użytkownika – narzędzi programistycznych zastosowanych przy rozwiązywaniu problemów.
