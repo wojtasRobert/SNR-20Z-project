@@ -17,13 +17,20 @@ trdata = ImageDataGenerator(preprocessing_function=preprocess_input,
     zoom_range=0.2,
     horizontal_flip=True,
     fill_mode='nearest')
-traindata = trdata.flow_from_directory(directory="data/Training",target_size=(224,224)) ##set params
-
+traindata = trdata.flow_from_directory(directory="../data/Training",target_size=(224,224)) ##set params
+print(traindata)
 CLASSES = len(traindata.class_indices) ##get number of classes
-
+i = 0
+for batch in trdata.flow(traindata, batch_size=100,
+                          save_to_dir='augmented',
+                          save_prefix='aug',
+                          save_format='png'):    
+    i += 1    
+    if i > 20:        
+        break
 ## get test data
 tsdata = ImageDataGenerator()
-testdata = tsdata.flow_from_directory(directory="data/Test", target_size=(224,224))
+testdata = tsdata.flow_from_directory(directory="../data/Test", target_size=(224,224))
 
 # ##load pretrained model without last layer- classifing
 base_model = VGG16(weights='imagenet', include_top=False)
@@ -53,13 +60,7 @@ MODEL_FILE = 'models/vgg16-pretrained-rmsprop.model'
 ##to be checked
 # checkpoint = ModelCheckpoint("vgg16_1.h5", monitor='val_acc', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
 # early = EarlyStopping(monitor='val_acc', min_delta=0, patience=20, verbose=1, mode='auto')
-history = model.fit(
-    traindata,
-    epochs=EPOCHS,
-    steps_per_epoch=STEPS_PER_EPOCH,
-    validation_data=testdata,
-    validation_steps=VALIDATION_STEPS)
-
+#
 
 model.save(MODEL_FILE)
 
