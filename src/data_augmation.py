@@ -26,9 +26,9 @@ image = np.expand_dims(image, axis=0)
 # initialize the total number of images generated thus far
 aug = ImageDataGenerator(
 	rotation_range=0.40,
-	zoom_range=0.2,
-	width_shift_range=0.2,
-	height_shift_range=0.2,
+	zoom_range=0.1,
+	width_shift_range=0.15,
+	height_shift_range=0.15,
 	shear_range=0.2,
 	horizontal_flip=True,
 	fill_mode="nearest")

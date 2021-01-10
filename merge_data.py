@@ -2,8 +2,13 @@ import os
 import shutil
 
 dirs = ['.\\data\\Test', '.\\data\\Training']
+new_dir = '.\\data\\All'
 
-new_dir = '.\\data\All'
+# scieżki do csalenia danych treningowych (głównych i rozszerzonych)
+#dirs = ['.\\data\\Aug', '.\\data\\Training']
+#new_dir = '.\\data\\NewTraining'
+
+
 
 def copytree(src, dst, symlinks=False, ignore=None):
     if not os.path.exists(dst):
