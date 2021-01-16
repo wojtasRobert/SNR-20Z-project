@@ -21,7 +21,7 @@ def count_class_ratio(class_counter, max_counter):
         temp = int(0.15 * class_counter)
         # ilość losowanych obrazów z rozszerzeniem 5
         temp_img_cnt = int(temp / 5)
-        temp_aug = 5;
+        temp_aug = 5
     elif ratio > 70:
         temp_img_cnt = int(temp / 10)
         temp_aug = 10
@@ -64,11 +64,11 @@ list_dir = list(os.listdir(path=data_train))
 if os.path.exists(data_train_out) == False:
     os.mkdir(data_train_out)
 
-max_classes_counter = 0;
+max_classes_counter = 0
 classes = [[0 for col in range(2)] for row in range(len(list_dir))]
 tab = [["" for col in range(2)] for row in range(10)]
 #print (os.path.join(data_train,list_dir[1]))
-i=0;
+i=0
 
 ## sprawdzanie ilości danych treningowych dla równych klas
 for subfiles in list_dir:
@@ -77,7 +77,7 @@ for subfiles in list_dir:
     #dodawanie do tablicy klasy i liczby danych treningowych
     classes[i][0] = subfiles
     classes[i][1] = len(list_subfile)
-    i=i+1;
+    i=i+1
     #sprawdzanie maksymalnej liczby danych treningowych
     if len(list_subfile) > max_classes_counter:
         max_classes_counter =len(list_subfile)
@@ -88,7 +88,7 @@ print("Najwiksza liczba obrazów: ",max_classes_counter)
 #rozszerzenie danych dla przybliżonej loczby danych dla kazdej klasy
 for subfiles,counter_classes in classes:
     if os.path.exists(os.path.join(data_train_out, subfiles))==False:
-        os.mkdir(os.path.join(data_train_out,subfiles));
+        os.mkdir(os.path.join(data_train_out,subfiles))
 
     aug_info = count_class_ratio(counter_classes, max_classes_counter)
     print("Ilość obrazów dla klasy przed rozszerzeniem: ",counter_classes)
