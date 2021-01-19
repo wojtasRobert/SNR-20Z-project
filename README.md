@@ -3,7 +3,7 @@ Projekt z przedmiotu Sieci Neuronowe.
 
 - [SNR-20Z-project](#snr-20z-project)
 - [Zadania do wykonania](#zadania-do-wykonania)
-- [Rozwiązanie powinnozawierać:](#rozwiązanie-powinnozawierać)
+- [Rozwiązanie powinno zawierać:](#rozwiązanie-powinno-zawierać)
 - [Run the project:](#run-the-project)
   - [1. Create virtual env](#1-create-virtual-env)
     - [On macOS and Linux:](#on-macos-and-linux)
@@ -81,6 +81,15 @@ If you install new packages, update requirements.txt using:
 
 
 # Przydatne linki
+https://towardsdatascience.com/step-by-step-vgg16-implementation-in-keras-for-beginners-a833c686ae6c
 
+https://jacobgil.github.io/deeplearning/class-activation-maps
 
+https://www.pyimagesearch.com/2020/03/09/grad-cam-visualize-class-activation-maps-with-keras-tensorflow-and-deep-learning/
+
+https://hackernoon.com/deep-dream-with-tensorflow-a-practical-guide-to-build-your-first-deep-dream-experience-f91df601f479
+
+https://www.tensorflow.org/tutorials/images/data_augmentation
+
+https://machinelearningmastery.com/how-to-configure-image-data-augmentation-when-training-deep-learning-neural-networks/
 

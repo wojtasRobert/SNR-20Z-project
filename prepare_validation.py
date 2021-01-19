@@ -1,3 +1,6 @@
+##################################################
+# DEPRECATED -> UŻYWAĆ get_validation_data.py XD #
+##################################################
 import numpy as np
 import os
 import shutil
